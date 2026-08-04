@@ -1,24 +1,10 @@
 /**
- * ATELIÊ LINHA CASA - Core Interactive Scripts
- * Pure Vanilla JavaScript implementation
+ * ATELIÊ LINHA CASA - Redesign Script
+ * High-End Interior Store & Customizer Interactivity
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Sticky Header Scroll Effect
-  const header = document.querySelector('.site-header');
-  
-  const handleHeaderScroll = () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  };
-  
-  window.addEventListener('scroll', handleHeaderScroll);
-  handleHeaderScroll(); // Initial check
-
-  // 2. Mobile Navigation Toggle
+  // 1. Mobile Navigation Toggle
   const hamburger = document.getElementById('hamburger-toggle');
   const mobileNav = document.getElementById('mobile-nav');
   const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
@@ -26,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const openMobileNav = () => {
     hamburger.classList.add('active');
-    hamburger.setAttribute('aria-expanded', 'true');
     mobileNav.classList.add('active');
     mobileNavBackdrop.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -34,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeMobileNav = () => {
     hamburger.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', 'false');
     mobileNav.classList.remove('active');
     mobileNavBackdrop.classList.remove('active');
     document.body.style.overflow = '';
@@ -43,48 +27,89 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hamburger) {
     hamburger.addEventListener('click', () => {
       const isOpen = mobileNav.classList.contains('active');
-      if (isOpen) {
-        closeMobileNav();
-      } else {
-        openMobileNav();
-      }
+      if (isOpen) closeMobileNav();
+      else openMobileNav();
     });
   }
 
-  if (mobileNavBackdrop) {
-    mobileNavBackdrop.addEventListener('click', closeMobileNav);
-  }
+  if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileNav);
+  mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileNav));
 
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeMobileNav);
+  // 2. Hero Interactive Room Thumbnail Switcher
+  const heroThumbBtns = document.querySelectorAll('.hero-thumb-btn');
+  const heroMainImg = document.getElementById('hero-main-img');
+  const heroRoomTitle = document.getElementById('hero-room-title');
+  const heroRoomDesc = document.getElementById('hero-room-desc');
+  const heroRoomBadge = document.getElementById('hero-room-badge');
+
+  heroThumbBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      heroThumbBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const img = btn.getAttribute('data-img');
+      const title = btn.getAttribute('data-title');
+      const desc = btn.getAttribute('data-desc');
+      const badge = btn.getAttribute('data-badge');
+
+      if (heroMainImg) heroMainImg.src = img;
+      if (heroRoomTitle) heroRoomTitle.textContent = title;
+      if (heroRoomDesc) heroRoomDesc.textContent = desc;
+      if (heroRoomBadge) heroRoomBadge.textContent = badge;
+    });
   });
 
-  // 3. Smooth Scroll Navigation with Active Link Highlight
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  // 3. Interactive Room Customizer Widget ("Monte Seu Projeto")
+  let customState = {
+    comodo: 'Cozinha Planejada',
+    acabamento: 'Carvalho Natural & Grafite',
+    ferragem: 'Sistema Soft-Close com Amortecimento'
+  };
 
-  const highlightNavOnScroll = () => {
-    const scrollY = window.pageYOffset;
+  const setupStepButtons = (stepContainerId, stateKey) => {
+    const container = document.getElementById(stepContainerId);
+    if (!container) return;
+    const buttons = container.querySelectorAll('.customizer-option-btn');
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.classList.remove('selected');
+          b.querySelector('span:last-child').textContent = '';
         });
-      }
+        btn.classList.add('selected');
+        btn.querySelector('span:last-child').textContent = '✓';
+        
+        customState[stateKey] = btn.getAttribute('data-value');
+        updateCustomizerSummary();
+      });
     });
   };
 
-  window.addEventListener('scroll', highlightNavOnScroll);
+  setupStepButtons('custom-step-1', 'comodo');
+  setupStepButtons('custom-step-2', 'acabamento');
+  setupStepButtons('custom-step-3', 'ferragem');
 
-  // 4. Project Modal Lightbox Data & Logic
+  const updateCustomizerSummary = () => {
+    const titleEl = document.getElementById('custom-summary-title');
+    const descEl = document.getElementById('custom-summary-desc');
+    const btnEl = document.getElementById('customizer-send-btn');
+
+    if (titleEl) titleEl.textContent = `Projeto: ${customState.comodo} em ${customState.acabamento.split('&')[0].trim()}`;
+    if (descEl) descEl.textContent = `Linha: ${customState.acabamento} • Ferragens: ${customState.ferragem}`;
+
+    const text = `Olá! Montei uma simulação no site do Ateliê Linha Casa:\n` +
+                 `• Cômodo: *${customState.comodo}*\n` +
+                 `• Acabamento: *${customState.acabamento}*\n` +
+                 `• Ferragens: *${customState.ferragem}*\n` +
+                 `Gostaria de receber uma estimativa para esse projeto!`;
+
+    if (btnEl) btnEl.href = `https://wa.me/5511999999999?text=${encodeURIComponent(text)}`;
+  };
+
+  updateCustomizerSummary();
+
+  // 4. Project Modal Lightbox
   const projectsData = {
     '1': {
       title: 'Cozinha Contemporânea',
@@ -149,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '6': {
       title: 'Recepção Corporativa',
       category: 'Espaços Comerciais',
-      image: 'images/env_cozinhas.jpg', // Fallback or architectural image
+      image: 'images/about.jpg',
       description: 'Balcão de recepção exclusivo com geometria curvilínea em marcenaria artesanal e nichos de atendimento integrados. Alinhamento perfeito com a identidade visual contemporânea da marca.',
       specs: [
         { label: 'Materiais', value: 'MDF Curvável, Lâmina Natural, Corian' },
@@ -180,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalTitle.textContent = data.title;
     modalDescription.textContent = data.description;
 
-    // Render Specs
     modalSpecsContainer.innerHTML = data.specs.map(spec => `
       <div class="modal-spec-item">
         <span class="modal-spec-label">${spec.label}</span>
@@ -188,7 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
 
-    // Pre-fill WhatsApp action
     const waText = encodeURIComponent(`Olá! Vi o projeto "${data.title}" no site do Ateliê Linha Casa e gostaria de um orçamento semelhante.`);
     modalWhatsappBtn.href = `https://wa.me/5511999999999?text=${waText}`;
 
@@ -201,12 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   };
 
-  // Add click events to project cards
-  const projectCards = document.querySelectorAll('.project-card');
-  projectCards.forEach(card => {
+  document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
-      const projectId = card.getAttribute('data-project');
-      openProjectModal(projectId);
+      openProjectModal(card.getAttribute('data-project'));
     });
   });
 
@@ -221,7 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. FAQ Accordion Logic
   const faqItems = document.querySelectorAll('.faq-item');
-
   faqItems.forEach(item => {
     const button = item.querySelector('.faq-button');
     const content = item.querySelector('.faq-content');
@@ -229,16 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Close all other active items (accordion behavior)
       faqItems.forEach(otherItem => {
         if (otherItem !== item) {
           otherItem.classList.remove('active');
-          const otherContent = otherItem.querySelector('.faq-content');
-          otherContent.style.maxHeight = null;
+          otherItem.querySelector('.faq-content').style.maxHeight = null;
         }
       });
 
-      // Toggle current item
       if (isActive) {
         item.classList.remove('active');
         content.style.maxHeight = null;
@@ -249,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Contact Form to WhatsApp Interactivity
+  // 6. Contact Form Submission
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -261,25 +277,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const mensagem = document.getElementById('form-mensagem').value.trim();
 
       if (!nome || !whatsapp) {
-        alert('Por favor, preencha seu nome e telefone/WhatsApp.');
+        alert('Por favor, preencha seu nome e WhatsApp.');
         return;
       }
 
       let text = `Olá! Meu nome é ${nome}.\n`;
       text += `Gostaria de solicitar um orçamento para o ambiente: *${ambiente}*.\n`;
-      if (mensagem) {
-        text += `Detalhes do projeto: ${mensagem}\n`;
-      }
+      if (mensagem) text += `Detalhes do projeto: ${mensagem}\n`;
       text += `Meu WhatsApp para contato: ${whatsapp}`;
 
-      const waUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(text)}`;
-      window.open(waUrl, '_blank');
+      window.open(`https://wa.me/5511999999999?text=${encodeURIComponent(text)}`, '_blank');
     });
   }
 
-  // 7. Scroll Reveal Animation using Intersection Observer
+  // 7. Scroll Reveal Observer
   const revealElements = document.querySelectorAll('.reveal');
-
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -290,10 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {
     root: null,
     threshold: 0.01,
-    rootMargin: '150px 0px 150px 0px'
+    rootMargin: '100px 0px'
   });
 
-  revealElements.forEach(el => {
-    revealObserver.observe(el);
-  });
+  revealElements.forEach(el => revealObserver.observe(el));
 });

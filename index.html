@@ -12,18 +12,12 @@
   <meta name="author" content="Ateliê Linha Casa">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph / Facebook / WhatsApp -->
+  <!-- Open Graph / WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://atelielinhacasa.com.br/">
   <meta property="og:title" content="Ateliê Linha Casa | Móveis Planejados & Design de Interiores">
   <meta property="og:description" content="Ambientes planejados para combinar com a sua rotina. Projetos personalizados que unem estética e funcionalidade.">
   <meta property="og:image" content="images/hero.jpg">
-
-  <!-- Twitter Meta Tags -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Ateliê Linha Casa | Móveis Planejados">
-  <meta property="twitter:description" content="Ambientes planejados para combinar com a sua rotina.">
-  <meta property="twitter:image" content="images/hero.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +31,19 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 </head>
 <body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <span>📍 SHOWROOM JUNDIAÍ • AV. DAS PALMEIRAS, 480</span>
+      </div>
+      <div class="top-bar-right">
+        <span>🕒 SEG A SEX: 08H ÀS 18H | SÁB: 09H ÀS 13H</span>
+        <span>📞 (11) 99999-9999</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ==========================================================================
        1. HEADER
@@ -61,7 +68,7 @@
 
       <!-- Actions -->
       <div class="header-actions">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-primary header-cta">
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-gold header-cta">
           Solicitar orçamento
         </a>
 
@@ -86,53 +93,104 @@
       <a href="#processo" class="mobile-nav-link">Processo</a>
       <a href="#contato" class="mobile-nav-link">Contato</a>
     </nav>
-    <div class="mobile-nav-footer">
-      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+    <div style="border-top: 1px solid var(--border-dark); padding-top: 2rem;">
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width: 100%;">
         Solicitar orçamento
       </a>
-      <div class="mobile-contact-info">
-        <span>📍 Jundiaí — SP</span>
-        <span>📞 (11) 99999-9999</span>
+      <div style="margin-top: 1.25rem; font-size: 0.8125rem; color: var(--text-muted-light);">
+        📍 Av. das Palmeiras, 480 — Jundiaí / SP<br>
+        📞 (11) 99999-9999
       </div>
     </div>
   </aside>
 
   <main>
     <!-- ==========================================================================
-         2. HERO SECTION
+         2. HERO SECTION - ASYMMETRICAL ARCHITECTURAL SHOWCASE SPLIT
          ========================================================================== -->
     <section class="hero-section" id="inicio">
       <div class="container">
         <div class="hero-grid">
-          <!-- Text Content -->
-          <div class="hero-content reveal">
+          <!-- Left Showcase Image Frame -->
+          <div class="hero-showcase-box reveal">
+            <img src="images/hero.jpg" alt="Cozinha planejada de alto padrão" class="hero-showcase-img" id="hero-main-img">
+            <div class="hero-showcase-overlay">
+              <span class="hero-showcase-tag" id="hero-tag">Mostra de Ambientes</span>
+              
+              <div class="hero-showcase-bottom">
+                <div class="hero-showcase-meta">
+                  <h4 id="hero-room-title">Cozinha Gourmet Contemporânea</h4>
+                  <p id="hero-room-desc">Lâmina de carvalho natural & laca matte grafite</p>
+                </div>
+                <span class="hero-showcase-badge" id="hero-room-badge">100% Sob Medida</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content Panel (Warm Sand Card) -->
+          <div class="hero-panel reveal">
             <span class="hero-eyebrow">MÓVEIS PLANEJADOS • DESIGN • FUNCIONALIDADE</span>
-            <h1 class="hero-title">Ambientes pensados para viver melhor</h1>
+            <h1 class="hero-title">
+              Ambientes pensados para <span>viver melhor</span>
+            </h1>
             <p class="hero-subtitle">
               Projetos personalizados que unem estética, funcionalidade e soluções planejadas para acompanhar a sua rotina.
             </p>
+
+            <!-- Action Buttons -->
             <div class="hero-buttons">
-              <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-dark">
                 Solicitar orçamento
               </a>
-              <a href="#projetos" class="btn btn-secondary">
+              <a href="#projetos" class="btn btn-outline-gold" style="color: var(--text-dark); border-color: var(--accent-wood);">
                 Conhecer projetos
               </a>
             </div>
-            <div class="hero-badge">
-              <span class="hero-badge-icon"></span>
+
+            <!-- Interactive Room Thumbnails Switcher -->
+            <div class="hero-thumbnails-label">Explore os Ambientes em Destaque:</div>
+            <div class="hero-thumbnails-grid">
+              <button type="button" class="hero-thumb-btn active" data-img="images/hero.jpg" data-title="Cozinha Gourmet Contemporânea" data-desc="Lâmina de carvalho natural & laca matte grafite" data-badge="Cozinhas">
+                <img src="images/hero.jpg" alt="Cozinha">
+                <span>Cozinhas</span>
+              </button>
+              <button type="button" class="hero-thumb-btn" data-img="images/env_quartos.jpg" data-title="Suíte Master & Closet" data-desc="Portas em vidro reflecta bronze & iluminação LED" data-badge="Quartos">
+                <img src="images/env_quartos.jpg" alt="Quarto">
+                <span>Quartos</span>
+              </button>
+              <button type="button" class="hero-thumb-btn" data-img="images/env_salas.jpg" data-title="Living & Home Theater" data-desc="Painel em marcenaria ripada & rack flutuante" data-badge="Salas">
+                <img src="images/env_salas.jpg" alt="Sala">
+                <span>Salas</span>
+              </button>
+            </div>
+
+            <div class="hero-note">
+              <span style="color: var(--accent-wood);">✓</span>
               <span>Projetos personalizados para residências e empresas.</span>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Hero Image Visual -->
-          <div class="hero-visual reveal reveal-delay-1">
-            <div class="hero-image-wrapper">
-              <img src="images/hero.jpg" alt="Cozinha planejada sofisticada com marcenaria em madeira nobre e iluminação quente" class="hero-image" width="800" height="550">
+      <!-- Hero Bottom Metrics Bar -->
+      <div class="hero-metrics-bar" style="margin-top: 3.5rem;">
+        <div class="container">
+          <div class="hero-metrics-grid">
+            <div class="hero-metric-item">
+              <span class="hero-metric-icon">✦</span>
+              <span>Projeto personalizado</span>
             </div>
-            <div class="hero-floating-card">
-              <h4>Ateliê Linha Casa</h4>
-              <p>Móveis sob medida com acabamento impecável e ergonomia sob medida.</p>
+            <div class="hero-metric-item">
+              <span class="hero-metric-icon">✦</span>
+              <span>Aproveitamento inteligente</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-icon">✦</span>
+              <span>Acabamentos selecionados</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-icon">✦</span>
+              <span>Acompanhamento em cada etapa</span>
             </div>
           </div>
         </div>
@@ -140,82 +198,146 @@
     </section>
 
     <!-- ==========================================================================
-         3. SEÇÃO DE CONFIANÇA
+         INTERACTIVE ROOM CUSTOMIZER WIDGET ("Monte Seu Projeto")
          ========================================================================== -->
-    <section class="trust-section">
+    <section class="customizer-section">
       <div class="container">
-        <div class="trust-grid">
-          <div class="trust-item reveal">
-            <span class="trust-icon">✦</span>
-            <span class="trust-text">Projeto personalizado</span>
+        <div class="section-header text-center reveal">
+          <span class="section-tag">Simulador de Projeto</span>
+          <h2 class="section-title">Monte a proposta ideal para o seu ambiente</h2>
+          <p class="section-subtitle">
+            Selecione o cômodo, linha de acabamento e preferências para enviar seu pré-briefing direto ao nosso atendimento.
+          </p>
+        </div>
+
+        <div class="customizer-card reveal">
+          <div class="customizer-steps-grid">
+            <!-- Step 1: Cômodo -->
+            <div class="customizer-step-col">
+              <h4><span>01.</span> Escolha o Cômodo</h4>
+              <div class="customizer-options-list" id="custom-step-1">
+                <button type="button" class="customizer-option-btn selected" data-value="Cozinha Planejada">
+                  <span>Cozinha Planejada</span>
+                  <span>✓</span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Quarto / Suíte Master">
+                  <span>Quarto / Suíte Master</span>
+                  <span></span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Sala de Estar Integrada">
+                  <span>Sala de Estar Integrada</span>
+                  <span></span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Home Office Executive">
+                  <span>Home Office Executive</span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Acabamento -->
+            <div class="customizer-step-col">
+              <h4><span>02.</span> Linha de Madeira / Cor</h4>
+              <div class="customizer-options-list" id="custom-step-2">
+                <button type="button" class="customizer-option-btn selected" data-value="Carvalho Natural & Grafite">
+                  <span>Carvalho Natural & Grafite</span>
+                  <span>✓</span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Louro Freijó Aveludado">
+                  <span>Louro Freijó Aveludado</span>
+                  <span></span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Laca Matte Off-White">
+                  <span>Laca Matte Off-White</span>
+                  <span></span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Nogueira & Vidro Reflecta">
+                  <span>Nogueira & Vidro Reflecta</span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Ferragens -->
+            <div class="customizer-step-col">
+              <h4><span>03.</span> Tipo de Ferragem</h4>
+              <div class="customizer-options-list" id="custom-step-3">
+                <button type="button" class="customizer-option-btn selected" data-value="Sistema Soft-Close com Amortecimento">
+                  <span>Soft-Close Amortecido</span>
+                  <span>✓</span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Fecho-Toque (Push to Open)">
+                  <span>Fecho-Toque Minimalista</span>
+                  <span></span>
+                </button>
+                <button type="button" class="customizer-option-btn" data-value="Perfis Slim de Alumínio Gold/Preto">
+                  <span>Perfis Slim Alumínio</span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="trust-item reveal reveal-delay-1">
-            <span class="trust-icon">✦</span>
-            <span class="trust-text">Aproveitamento inteligente do espaço</span>
-          </div>
-          <div class="trust-item reveal reveal-delay-2">
-            <span class="trust-icon">✦</span>
-            <span class="trust-text">Materiais e acabamentos selecionados</span>
-          </div>
-          <div class="trust-item reveal reveal-delay-3">
-            <span class="trust-icon">✦</span>
-            <span class="trust-text">Acompanhamento em cada etapa</span>
+
+          <!-- Summary Bar -->
+          <div class="customizer-summary-box">
+            <div class="customizer-summary-text">
+              <h5 id="custom-summary-title">Projeto: Cozinha Planejada em Carvalho Natural</h5>
+              <p id="custom-summary-desc">Configuração: Carvalho Natural & Grafite • Sistema Soft-Close Amortecido</p>
+            </div>
+            <a id="customizer-send-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              Solicitar este orçamento no WhatsApp
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         4. SOBRE
+         4. SOBRE (EDITORIAL SPLIT)
          ========================================================================== -->
     <section class="about-section" id="sobre">
       <div class="container">
         <div class="about-grid">
-          <!-- Text -->
+          <!-- Content -->
           <div class="about-content reveal">
-            <span class="section-tag">Nossa essência</span>
-            <h2 class="section-title" style="margin-bottom: 1.5rem;">
+            <span class="section-tag">Nossa Essência</span>
+            <h2 class="section-title" style="margin-bottom: 1.75rem;">
               Cada espaço tem uma história. Cada projeto, uma solução.
             </h2>
-            <p class="about-text">
+            <p>
               No Ateliê Linha Casa, acreditamos que um ambiente bem planejado deve refletir a forma como cada pessoa vive.
             </p>
-            <p class="about-text">
+            <p>
               Por isso, desenvolvemos projetos personalizados, considerando as medidas do espaço, as necessidades da rotina, as preferências estéticas e os detalhes que fazem diferença no dia a dia.
             </p>
-            <p class="about-text">
+            <p>
               Do primeiro atendimento à instalação, buscamos criar uma experiência próxima, organizada e transparente.
             </p>
-            <div style="margin-top: 1rem;">
-              <a href="#processo" class="btn btn-secondary">
+            <div style="margin-top: 2rem;">
+              <a href="#processo" class="btn btn-outline-gold">
                 Conheça nosso processo
               </a>
             </div>
           </div>
 
-          <!-- Image -->
-          <div class="about-image-column reveal reveal-delay-1">
-            <div class="about-image-wrapper">
-              <img src="images/about.jpg" alt="Detalhe artesanal de marcenaria e acabamento de alta qualidade em madeira" class="about-image" width="600" height="450">
-            </div>
-            <div class="about-experience-badge">
-              <div class="about-experience-num">100%</div>
-              <div class="about-experience-text">Sob medida</div>
-            </div>
+          <!-- 2-Image Magazine Composition -->
+          <div class="about-images-composition reveal">
+            <img src="images/about.jpg" alt="Marcenaria de alto padrão" class="about-img-main" width="550" height="400">
+            <img src="images/env_banheiros.jpg" alt="Acabamento refinado sob medida" class="about-img-secondary" width="380" height="280">
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         5. AMBIENTES
+         5. AMBIENTES (SHOWROOM CATALOG)
          ========================================================================== -->
     <section class="environments-section" id="ambientes">
       <div class="container">
         <div class="section-header text-center reveal">
-          <span class="section-tag">Possibilidades</span>
+          <span class="section-tag">Catálogo de Ambientes</span>
           <h2 class="section-title">Projetos para diferentes formas de viver</h2>
-          <p class="subtitle">
+          <p class="section-subtitle">
             Soluções de marcenaria sob medida criadas especificamente para valorizar cada cômodo da sua casa ou empresa.
           </p>
         </div>
@@ -224,8 +346,8 @@
           <!-- 1. Cozinhas -->
           <article class="environment-card reveal">
             <div class="environment-image-box">
-              <img src="images/env_cozinhas.jpg" alt="Cozinha planejada com marcenaria elegante" class="environment-image" loading="lazy" width="400" height="300">
-              <span class="environment-category-tag">Cozinhas</span>
+              <img src="images/env_cozinhas.jpg" alt="Cozinhas planejadas" class="environment-image" loading="lazy" width="400" height="300">
+              <span class="environment-tag">Cozinhas</span>
             </div>
             <div class="environment-content">
               <h3 class="environment-title">Cozinhas</h3>
@@ -240,10 +362,10 @@
           </article>
 
           <!-- 2. Quartos -->
-          <article class="environment-card reveal reveal-delay-1">
+          <article class="environment-card reveal">
             <div class="environment-image-box">
-              <img src="images/env_quartos.jpg" alt="Quarto planejado com armários embutidos e iluminação pontual" class="environment-image" loading="lazy" width="400" height="300">
-              <span class="environment-category-tag">Quartos</span>
+              <img src="images/env_quartos.jpg" alt="Quartos planejados" class="environment-image" loading="lazy" width="400" height="300">
+              <span class="environment-tag">Quartos</span>
             </div>
             <div class="environment-content">
               <h3 class="environment-title">Quartos</h3>
@@ -258,10 +380,10 @@
           </article>
 
           <!-- 3. Salas -->
-          <article class="environment-card reveal reveal-delay-2">
+          <article class="environment-card reveal">
             <div class="environment-image-box">
-              <img src="images/env_salas.jpg" alt="Sala de estar planejada com painel para TV em marcenaria ripada" class="environment-image" loading="lazy" width="400" height="300">
-              <span class="environment-category-tag">Salas</span>
+              <img src="images/env_salas.jpg" alt="Salas planejadas" class="environment-image" loading="lazy" width="400" height="300">
+              <span class="environment-tag">Salas</span>
             </div>
             <div class="environment-content">
               <h3 class="environment-title">Salas</h3>
@@ -278,8 +400,8 @@
           <!-- 4. Home Office -->
           <article class="environment-card reveal">
             <div class="environment-image-box">
-              <img src="images/env_homeoffice.jpg" alt="Home office planejado com escrivaninha suspensa e prateleiras" class="environment-image" loading="lazy" width="400" height="300">
-              <span class="environment-category-tag">Home Office</span>
+              <img src="images/env_homeoffice.jpg" alt="Home Office planejado" class="environment-image" loading="lazy" width="400" height="300">
+              <span class="environment-tag">Home Office</span>
             </div>
             <div class="environment-content">
               <h3 class="environment-title">Home Office</h3>
@@ -294,10 +416,10 @@
           </article>
 
           <!-- 5. Banheiros -->
-          <article class="environment-card reveal reveal-delay-1">
+          <article class="environment-card reveal">
             <div class="environment-image-box">
-              <img src="images/env_banheiros.jpg" alt="Gabinete de banheiro planejado em madeira tratada" class="environment-image" loading="lazy" width="400" height="300">
-              <span class="environment-category-tag">Banheiros</span>
+              <img src="images/env_banheiros.jpg" alt="Banheiros planejados" class="environment-image" loading="lazy" width="400" height="300">
+              <span class="environment-tag">Banheiros</span>
             </div>
             <div class="environment-content">
               <h3 class="environment-title">Banheiros</h3>
@@ -312,10 +434,10 @@
           </article>
 
           <!-- 6. Espaços Comerciais -->
-          <article class="environment-card reveal reveal-delay-2">
+          <article class="environment-card reveal">
             <div class="environment-image-box">
-              <img src="images/env_cozinhas.jpg" alt="Recepção e escritório comercial com balcão de marcenaria sob medida" class="environment-image" loading="lazy" width="400" height="300">
-              <span class="environment-category-tag">Comercial</span>
+              <img src="images/hero.jpg" alt="Espaços Comerciais planejados" class="environment-image" loading="lazy" width="400" height="300">
+              <span class="environment-tag">Comercial</span>
             </div>
             <div class="environment-content">
               <h3 class="environment-title">Espaços Comerciais</h3>
@@ -333,15 +455,15 @@
     </section>
 
     <!-- ==========================================================================
-         6. PROJETOS EM DESTAQUE (GALLERY & MODAL TRIGGER)
+         6. PROJETOS EM DESTAQUE & MODAL
          ========================================================================== -->
     <section class="projects-section" id="projetos">
       <div class="container">
         <div class="section-header text-center reveal">
-          <span class="section-tag">Portfólio</span>
+          <span class="section-tag">Mostra de Projetos</span>
           <h2 class="section-title">Projetos que valorizam cada detalhe</h2>
-          <p class="subtitle">
-            Clique nos ambientes para visualizar especificações detalhadas, materiais utilizados e fotos de demonstração.
+          <p class="section-subtitle">
+            Clique nos ambientes para abrir a ficha técnica detalhada e opções de orçamento.
           </p>
         </div>
 
@@ -352,69 +474,57 @@
             <div class="project-card-overlay">
               <span class="project-category">Cozinhas</span>
               <h3 class="project-name">Cozinha Contemporânea</h3>
-              <div class="project-action-indicator">
-                Ver detalhes do projeto ➔
-              </div>
+              <div class="project-action-indicator">Ver ficha técnica ➔</div>
             </div>
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card reveal reveal-delay-1" data-project="2">
+          <div class="project-card reveal" data-project="2">
             <img src="images/env_quartos.jpg" alt="Quarto Planejado" class="project-card-image" loading="lazy" width="400" height="300">
             <div class="project-card-overlay">
               <span class="project-category">Quartos</span>
               <h3 class="project-name">Quarto Planejado</h3>
-              <div class="project-action-indicator">
-                Ver detalhes do projeto ➔
-              </div>
+              <div class="project-action-indicator">Ver ficha técnica ➔</div>
             </div>
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card reveal reveal-delay-2" data-project="3">
+          <div class="project-card reveal" data-project="3">
             <img src="images/env_salas.jpg" alt="Sala Integrada" class="project-card-image" loading="lazy" width="400" height="300">
             <div class="project-card-overlay">
               <span class="project-category">Salas</span>
               <h3 class="project-name">Sala Integrada</h3>
-              <div class="project-action-indicator">
-                Ver detalhes do projeto ➔
-              </div>
+              <div class="project-action-indicator">Ver ficha técnica ➔</div>
             </div>
           </div>
 
           <!-- Project 4 -->
           <div class="project-card reveal" data-project="4">
-            <img src="images/env_homeoffice.jpg" alt="Home Office Executive" class="project-card-image" loading="lazy" width="400" height="300">
+            <img src="images/env_homeoffice.jpg" alt="Home Office" class="project-card-image" loading="lazy" width="400" height="300">
             <div class="project-card-overlay">
               <span class="project-category">Home Office</span>
               <h3 class="project-name">Home Office</h3>
-              <div class="project-action-indicator">
-                Ver detalhes do projeto ➔
-              </div>
+              <div class="project-action-indicator">Ver ficha técnica ➔</div>
             </div>
           </div>
 
           <!-- Project 5 -->
-          <div class="project-card reveal reveal-delay-1" data-project="5">
+          <div class="project-card reveal" data-project="5">
             <img src="images/env_banheiros.jpg" alt="Closet & Vanity" class="project-card-image" loading="lazy" width="400" height="300">
             <div class="project-card-overlay">
               <span class="project-category">Banheiros</span>
-              <h3 class="project-name">Banheiro Spa & Vanity</h3>
-              <div class="project-action-indicator">
-                Ver detalhes do projeto ➔
-              </div>
+              <h3 class="project-name">Closet & Vanity</h3>
+              <div class="project-action-indicator">Ver ficha técnica ➔</div>
             </div>
           </div>
 
           <!-- Project 6 -->
-          <div class="project-card reveal reveal-delay-2" data-project="6">
+          <div class="project-card reveal" data-project="6">
             <img src="images/about.jpg" alt="Espaço Comercial" class="project-card-image" loading="lazy" width="400" height="300">
             <div class="project-card-overlay">
               <span class="project-category">Comercial</span>
               <h3 class="project-name">Espaço Comercial</h3>
-              <div class="project-action-indicator">
-                Ver detalhes do projeto ➔
-              </div>
+              <div class="project-action-indicator">Ver ficha técnica ➔</div>
             </div>
           </div>
         </div>
@@ -423,23 +533,23 @@
       </div>
     </section>
 
-    <!-- Project Lightbox Modal -->
+    <!-- Modal Lightbox -->
     <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="project-modal-backdrop" id="modal-backdrop"></div>
       <div class="project-modal-content">
-        <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar janela de detalhes">
-          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar janela">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
         <div class="modal-image-box">
-          <img id="modal-image" src="" alt="Projeto em destaque">
+          <img id="modal-image" src="" alt="Projeto">
         </div>
         <div class="modal-info-box">
           <div>
             <span class="modal-tag" id="modal-tag">Categoria</span>
             <h3 class="modal-title" id="modal-title">Nome do Projeto</h3>
-            <p class="modal-description" id="modal-description">Descrição detalhada do projeto.</p>
+            <p class="modal-description" id="modal-description">Descrição.</p>
             <div class="modal-specs" id="modal-specs">
-              <!-- Dynamic Specs -->
+              <!-- Specs -->
             </div>
           </div>
           <a id="modal-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
@@ -450,17 +560,57 @@
     </div>
 
     <!-- ==========================================================================
+         MATERIAL SWATCHES SHOWCASE
+         ========================================================================== -->
+    <section class="swatches-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">Texturas & Materiais</span>
+          <h2 class="section-title">Acabamentos Selecionados de Alto Padrão</h2>
+          <p class="section-subtitle">
+            Trabalhamos exclusivamente com MDF de alta densidade, lâminas naturais tratadas e ferragens de precisão.
+          </p>
+        </div>
+
+        <div class="swatches-grid">
+          <div class="swatch-card reveal">
+            <div class="swatch-preview" style="background: linear-gradient(135deg, #8C6D58 0%, #5C4535 100%);"></div>
+            <h3 class="swatch-title">Carvalho Natural</h3>
+            <p class="swatch-desc">Lâmina de madeira nobre com veios suaves e toque aveludado.</p>
+          </div>
+
+          <div class="swatch-card reveal">
+            <div class="swatch-preview" style="background: linear-gradient(135deg, #2A2A2A 0%, #171717 100%);"></div>
+            <h3 class="swatch-title">Laca Matte Grafite</h3>
+            <p class="swatch-desc">Pintura PU acetinada ultra-resistente contra riscos e umidade.</p>
+          </div>
+
+          <div class="swatch-card reveal">
+            <div class="swatch-preview" style="background: linear-gradient(135deg, #C8A97E 0%, #8A6B52 100%);"></div>
+            <h3 class="swatch-title">Louro Freijó</h3>
+            <p class="swatch-desc">Tonalidade aquecida atemporal para dormentes e painéis ripados.</p>
+          </div>
+
+          <div class="swatch-card reveal">
+            <div class="swatch-preview" style="background: linear-gradient(135deg, #D4C4B3 0%, #A89887 100%);"></div>
+            <h3 class="swatch-title">Vidro Reflecta Bronze</h3>
+            <p class="swatch-desc">Transparência sutil para portas de closets e cristaleiras técnicas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
          7. DIFERENCIAIS
          ========================================================================== -->
     <section class="differentials-section">
       <div class="container">
         <div class="section-header text-center reveal">
-          <span class="section-tag">Por que nos escolher</span>
+          <span class="section-tag">Excelência</span>
           <h2 class="section-title">Planejamento que vai além da estética</h2>
         </div>
 
         <div class="differentials-grid">
-          <!-- 01 -->
           <div class="differential-card reveal">
             <span class="differential-number">01</span>
             <h3 class="differential-title">Projeto personalizado</h3>
@@ -469,8 +619,7 @@
             </p>
           </div>
 
-          <!-- 02 -->
-          <div class="differential-card reveal reveal-delay-1">
+          <div class="differential-card reveal">
             <span class="differential-number">02</span>
             <h3 class="differential-title">Aproveitamento do espaço</h3>
             <p class="differential-desc">
@@ -478,8 +627,7 @@
             </p>
           </div>
 
-          <!-- 03 -->
-          <div class="differential-card reveal reveal-delay-2">
+          <div class="differential-card reveal">
             <span class="differential-number">03</span>
             <h3 class="differential-title">Atenção aos detalhes</h3>
             <p class="differential-desc">
@@ -487,8 +635,7 @@
             </p>
           </div>
 
-          <!-- 04 -->
-          <div class="differential-card reveal reveal-delay-3">
+          <div class="differential-card reveal">
             <span class="differential-number">04</span>
             <h3 class="differential-title">Atendimento próximo</h3>
             <p class="differential-desc">
@@ -496,7 +643,6 @@
             </p>
           </div>
 
-          <!-- 05 -->
           <div class="differential-card reveal">
             <span class="differential-number">05</span>
             <h3 class="differential-title">Execução organizada</h3>
@@ -516,41 +662,36 @@
         <div class="section-header text-center reveal">
           <span class="section-tag">Metodologia</span>
           <h2 class="section-title">Do primeiro contato ao ambiente pronto</h2>
-          <p class="subtitle">
+          <p class="section-subtitle">
             Conheça as cinco etapas transparentes que garantem a entrega de um ambiente impecável.
           </p>
         </div>
 
         <div class="process-timeline">
-          <!-- Step 1 -->
           <div class="process-step reveal">
             <div class="process-number-badge">01</div>
             <h3 class="process-step-title">Conversa inicial</h3>
             <p class="process-step-desc">Entendemos suas necessidades, ideias e expectativas.</p>
           </div>
 
-          <!-- Step 2 -->
-          <div class="process-step reveal reveal-delay-1">
+          <div class="process-step reveal">
             <div class="process-number-badge">02</div>
             <h3 class="process-step-title">Visita e medidas</h3>
             <p class="process-step-desc">Analisamos o espaço e realizamos as medições necessárias.</p>
           </div>
 
-          <!-- Step 3 -->
-          <div class="process-step reveal reveal-delay-2">
+          <div class="process-step reveal">
             <div class="process-number-badge">03</div>
             <h3 class="process-step-title">Desenvolvimento do projeto</h3>
             <p class="process-step-desc">Criamos uma proposta personalizada para o ambiente.</p>
           </div>
 
-          <!-- Step 4 -->
-          <div class="process-step reveal reveal-delay-3">
+          <div class="process-step reveal">
             <div class="process-number-badge">04</div>
             <h3 class="process-step-title">Aprovação e produção</h3>
             <p class="process-step-desc">Após os alinhamentos, o projeto segue para produção.</p>
           </div>
 
-          <!-- Step 5 -->
           <div class="process-step reveal">
             <div class="process-number-badge">05</div>
             <h3 class="process-step-title">Entrega e instalação</h3>
@@ -559,7 +700,7 @@
         </div>
 
         <div class="process-cta-box reveal">
-          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20come%C3%A7ar%20meu%20projeto%20de%20m%C3%B3veis%20planejados%20com%20o%20Ateli%C3%AA%20Linha%20Casa." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20come%C3%A7ar%20meu%20projeto%20de%20m%C3%B3veis%20planejados%20com%20o%20Ateli%C3%AA%20Linha%20Casa." target="_blank" rel="noopener noreferrer" class="btn btn-gold">
             Começar meu projeto
           </a>
         </div>
@@ -577,7 +718,7 @@
         <p class="cta-desc">
           Conte um pouco sobre o espaço que deseja planejar e solicite um orçamento.
         </p>
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-size: 1.05rem; padding: 1.15rem 2.5rem;">
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-size: 1rem; padding: 1.25rem 2.5rem;">
           <svg viewBox="0 0 32 32" style="width: 22px; height: 22px;"><path fill="currentColor" d="M16 2A13.94 13.94 0 0 0 4.07 23.09L2 30l7.13-1.86A13.94 13.94 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.88-1.61l-.42-.25-4.36 1.14 1.16-4.25-.27-.44a11.5 11.5 0 1 1 9.77 5.41zm6.32-8.62c-.35-.17-2.06-1-2.38-1.12s-.55-.17-.79.17-.92 1.12-1.13 1.35-.42.26-.77.09a9.7 9.7 0 0 1-2.86-1.76 10.7 10.7 0 0 1-1.98-2.47c-.2-.35 0-.54.16-.71s.35-.41.52-.61.23-.35.35-.58a.72.72 0 0 0 0-.68c-.09-.17-.79-1.9-1.08-2.61s-.58-.6-.79-.61h-.67a1.29 1.29 0 0 0-.94.44 3.92 3.92 0 0 0-1.22 2.91 6.84 6.84 0 0 0 1.43 3.63 15.65 15.65 0 0 0 6 5.31c.72.31 1.28.5 1.72.64a4.13 4.13 0 0 0 1.9.12 3.12 3.12 0 0 0 2.05-1.44 2.54 2.54 0 0 0 .17-1.44c-.09-.17-.35-.26-.7-.44z"/></svg>
           Solicitar orçamento pelo WhatsApp
         </a>
@@ -595,37 +736,28 @@
         </div>
 
         <div class="testimonials-grid">
-          <!-- Depoimento 1 -->
           <div class="testimonial-card reveal">
             <span class="testimonial-quote-icon">“</span>
             <p class="testimonial-text">
               “O projeto aproveitou muito bem o espaço e deixou a cozinha mais funcional para nossa rotina.”
             </p>
-            <div class="testimonial-author">
-              Cliente demonstrativo
-            </div>
+            <div class="testimonial-author">Cliente demonstrativo</div>
           </div>
 
-          <!-- Depoimento 2 -->
-          <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-card reveal">
             <span class="testimonial-quote-icon">“</span>
             <p class="testimonial-text">
               “Gostamos do atendimento e da atenção aos detalhes. O resultado ficou alinhado ao que imaginávamos.”
             </p>
-            <div class="testimonial-author">
-              Cliente demonstrativo
-            </div>
+            <div class="testimonial-author">Cliente demonstrativo</div>
           </div>
 
-          <!-- Depoimento 3 -->
-          <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-card reveal">
             <span class="testimonial-quote-icon">“</span>
             <p class="testimonial-text">
               “O processo foi organizado e conseguimos acompanhar cada etapa com clareza.”
             </p>
-            <div class="testimonial-author">
-              Cliente demonstrativo
-            </div>
+            <div class="testimonial-author">Cliente demonstrativo</div>
           </div>
         </div>
 
@@ -634,17 +766,16 @@
     </section>
 
     <!-- ==========================================================================
-         11. FAQ (DÚVIDAS FREQUENTES)
+         11. FAQ (ACCORDION)
          ========================================================================== -->
     <section class="faq-section">
       <div class="container faq-container">
         <div class="section-header text-center reveal">
-          <span class="section-tag">Esclarecimentos</span>
+          <span class="section-tag">Dúvidas Frequentes</span>
           <h2 class="section-title">Perguntas Frequentes</h2>
         </div>
 
         <div class="faq-accordion">
-          <!-- FAQ 1 -->
           <div class="faq-item reveal">
             <button class="faq-button" type="button">
               <span>Como funciona o orçamento?</span>
@@ -657,8 +788,7 @@
             </div>
           </div>
 
-          <!-- FAQ 2 -->
-          <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-item reveal">
             <button class="faq-button" type="button">
               <span>Vocês realizam projetos personalizados?</span>
               <span class="faq-icon">+</span>
@@ -670,8 +800,7 @@
             </div>
           </div>
 
-          <!-- FAQ 3 -->
-          <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-item reveal">
             <button class="faq-button" type="button">
               <span>É necessário fazer uma visita ao local?</span>
               <span class="faq-icon">+</span>
@@ -683,7 +812,6 @@
             </div>
           </div>
 
-          <!-- FAQ 4 -->
           <div class="faq-item reveal">
             <button class="faq-button" type="button">
               <span>Quanto tempo leva o desenvolvimento do projeto?</span>
@@ -696,8 +824,7 @@
             </div>
           </div>
 
-          <!-- FAQ 5 -->
-          <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-item reveal">
             <button class="faq-button" type="button">
               <span>Vocês atendem empresas?</span>
               <span class="faq-icon">+</span>
@@ -709,8 +836,7 @@
             </div>
           </div>
 
-          <!-- FAQ 6 -->
-          <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-item reveal">
             <button class="faq-button" type="button">
               <span>O projeto inclui instalação?</span>
               <span class="faq-icon">+</span>
@@ -726,17 +852,17 @@
     </section>
 
     <!-- ==========================================================================
-         12. CONTATO & LOCALIZAÇÃO
+         12. CONTATO
          ========================================================================== -->
     <section class="contact-section" id="contato">
       <div class="container">
         <div class="contact-grid">
-          <!-- Left Info & Map -->
+          <!-- Left Info -->
           <div class="contact-info-box reveal">
             <div>
-              <span class="section-tag">Fale Conosco</span>
+              <span class="section-tag">Showroom & Atendimento</span>
               <h2 class="section-title" style="margin-bottom: 1rem;">Ateliê Linha Casa</h2>
-              <p style="color: #666; margin-bottom: 2rem;">
+              <p style="color: var(--text-muted-light); margin-bottom: 2rem;">
                 Estamos à disposição para entender o seu projeto e apresentar as melhores soluções planejadas.
               </p>
             </div>
@@ -767,14 +893,14 @@
             <div class="contact-map-wrapper">
               <div class="contact-map-mock">
                 <div class="map-pin-icon">📍</div>
-                <h5 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--marrom-escuro);">Ateliê Linha Casa — Jundiaí</h5>
-                <p style="font-size: 0.8125rem; color: #666; margin-top: 0.25rem;">Avenida das Palmeiras, 480 — Centro</p>
+                <h5 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-light);">Ateliê Linha Casa — Jundiaí</h5>
+                <p style="font-size: 0.8125rem; color: var(--text-muted-light); margin-top: 0.25rem;">Avenida das Palmeiras, 480 — Centro</p>
               </div>
             </div>
           </div>
 
-          <!-- Right Interactive Quick Form -->
-          <div class="contact-form-box reveal reveal-delay-1">
+          <!-- Right Form -->
+          <div class="contact-form-box reveal">
             <h3 class="contact-form-title">Solicite seu orçamento</h3>
             <p class="contact-form-subtitle">Preencha os dados abaixo para direcionarmos o atendimento no WhatsApp.</p>
             
@@ -825,7 +951,7 @@
       <div class="footer-grid">
         <!-- Brand -->
         <div class="footer-brand-col">
-          <a href="#inicio" class="logo footer-logo">
+          <a href="#inicio" class="logo">
             <span class="logo-main">ATELIÊ</span>
             <span class="logo-sub">LINHA CASA</span>
           </a>
@@ -834,7 +960,7 @@
           </p>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Links 1 -->
         <div>
           <h4 class="footer-col-title">Navegação</h4>
           <ul class="footer-links-list">
@@ -847,7 +973,7 @@
           </ul>
         </div>
 
-        <!-- Ambientes Links -->
+        <!-- Links 2 -->
         <div>
           <h4 class="footer-col-title">Ambientes</h4>
           <ul class="footer-links-list">
@@ -861,7 +987,6 @@
         </div>
       </div>
 
-      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p class="footer-copy">
           © 2026 Ateliê Linha Casa. Todos os direitos reservados.
@@ -873,15 +998,13 @@
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       14. FLOATING WHATSAPP BUTTON
-       ========================================================================== -->
+  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20Ateli%C3%AA%20Linha%20Casa%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Falar pelo WhatsApp">
     <div class="whatsapp-pulse"></div>
     <svg viewBox="0 0 32 32"><path d="M16 2A13.94 13.94 0 0 0 4.07 23.09L2 30l7.13-1.86A13.94 13.94 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.88-1.61l-.42-.25-4.36 1.14 1.16-4.25-.27-.44a11.5 11.5 0 1 1 9.77 5.41zm6.32-8.62c-.35-.17-2.06-1-2.38-1.12s-.55-.17-.79.17-.92 1.12-1.13 1.35-.42.26-.77.09a9.7 9.7 0 0 1-2.86-1.76 10.7 10.7 0 0 1-1.98-2.47c-.2-.35 0-.54.16-.71s.35-.41.52-.61.23-.35.35-.58a.72.72 0 0 0 0-.68c-.09-.17-.79-1.9-1.08-2.61s-.58-.6-.79-.61h-.67a1.29 1.29 0 0 0-.94.44 3.92 3.92 0 0 0-1.22 2.91 6.84 6.84 0 0 0 1.43 3.63 15.65 15.65 0 0 0 6 5.31c.72.31 1.28.5 1.72.64a4.13 4.13 0 0 0 1.9.12 3.12 3.12 0 0 0 2.05-1.44 2.54 2.54 0 0 0 .17-1.44c-.09-.17-.35-.26-.7-.44z"/></svg>
   </a>
 
-  <!-- Core Script -->
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
